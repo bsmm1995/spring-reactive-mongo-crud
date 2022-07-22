@@ -4,24 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4e4597b-d087-43eb-b9c6-0d340cb8e7b5" name="Changes" comment="">
+    <list default="true" id="d4e4597b-d087-43eb-b9c6-0d340cb8e7b5" name="Changes" comment="Improvements added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bsmm/reactive/SpringReactiveMongoCrudApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bsmm/reactive/SpringReactiveMongoCrudApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bsmm/reactive/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bsmm/reactive/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bsmm/reactive/domain/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bsmm/reactive/domain/dto/ProductDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bsmm/reactive/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bsmm/reactive/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/bsmm/reactive/SpringReactiveMongoCrudApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bsmm/reactive/SpringReactiveMongoCrudApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bsmm/reactive/SpringReactiveMongoCrudApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bsmm/reactive/controller/ProductController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bsmm/reactive/domain/dto/ProductDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bsmm/reactive/domain/entity/ProductEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bsmm/reactive/repository/ProductRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bsmm/reactive/service/ProductService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bsmm/reactive/service/impl/ProductServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bsmm/reactive/utils/ProductMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/bsmm/reactive/SpringReactiveMongoCrudApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bsmm/reactive/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bsmm/reactive/controller/ProductController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +51,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "SDKs",
@@ -119,7 +106,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658460243548</updated>
       <workItem from="1658460247897" duration="3175000" />
-      <workItem from="1658463487320" duration="1723000" />
+      <workItem from="1658463487320" duration="2180000" />
     </task>
     <servers />
   </component>
@@ -136,5 +123,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Improvements added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improvements added" />
   </component>
 </project>
