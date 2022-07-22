@@ -27,20 +27,19 @@ class SpringReactiveMongoCrudApplicationTests {
     private ProductServiceImpl service;
 
     @Test
-    public void addProductTest() {
+    void addProductTest() {
         Mono<ProductDto> productDtoMono = Mono.just(new ProductDto("102", "mobile", 1, 10000));
         when(service.create(productDtoMono)).thenReturn(productDtoMono);
 
         webTestClient.post().uri("/products")
                 .body(Mono.just(productDtoMono), ProductDto.class)
                 .exchange()
-                .expectStatus().isOk();//200
-
+                .expectStatus().isOk();
     }
 
 
     @Test
-    public void getProductsTest() {
+    void getProductsTest() {
         Flux<ProductDto> productDtoFlux = Flux.just(new ProductDto("102", "mobile", 1, 10000),
                 new ProductDto("103", "TV", 1, 50000));
         when(service.getAll()).thenReturn(productDtoFlux);
@@ -56,12 +55,11 @@ class SpringReactiveMongoCrudApplicationTests {
                 .expectNext(new ProductDto("102", "mobile", 1, 10000))
                 .expectNext(new ProductDto("103", "TV", 1, 50000))
                 .verifyComplete();
-
     }
 
 
     @Test
-    public void getProductTest() {
+    void getProductTest() {
         Mono<ProductDto> productDtoMono = Mono.just(new ProductDto("102", "mobile", 1, 10000));
         when(service.getById(any())).thenReturn(productDtoMono);
 
@@ -79,22 +77,22 @@ class SpringReactiveMongoCrudApplicationTests {
 
 
     @Test
-    public void updateProductTest() {
+    void updateProductTest() {
         Mono<ProductDto> productDtoMono = Mono.just(new ProductDto("102", "mobile", 1, 10000));
         when(service.update("102", productDtoMono)).thenReturn(productDtoMono);
 
         webTestClient.put().uri("/products/update/102")
                 .body(Mono.just(productDtoMono), ProductDto.class)
                 .exchange()
-                .expectStatus().isOk();//200
+                .expectStatus().isOk();
     }
 
     @Test
-    public void deleteProductTest() {
+    void deleteProductTest() {
         given(service.deleteById(any())).willReturn(Mono.empty());
         webTestClient.delete().uri("/products/delete/102")
                 .exchange()
-                .expectStatus().isOk();//200
+                .expectStatus().isOk();
     }
 
 }

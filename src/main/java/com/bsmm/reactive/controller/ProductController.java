@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/products")
 @RequiredArgsConstructor
@@ -18,11 +20,13 @@ public class ProductController {
 
     @GetMapping
     public Flux<ProductDto> getAll() {
+        log.info("---GET ALL---");
         return productService.getAll();
     }
 
     @GetMapping("/{id}")
     public Mono<ProductDto> getByID(@PathVariable String id) {
+        log.info("id=" + id);
         return productService.getById(id);
     }
 
@@ -33,17 +37,20 @@ public class ProductController {
     }
 
     @PostMapping
-    public Mono<ProductDto> create(@RequestBody Mono<ProductDto> data) {
+    public Mono<ProductDto> create(@RequestBody @Valid Mono<ProductDto> data) {
+        log.info("data=" + data);
         return productService.create(data);
     }
 
     @PutMapping("/{id}")
-    public Mono<ProductDto> update(@RequestBody Mono<ProductDto> data, @PathVariable String id) {
+    public Mono<ProductDto> update(@RequestBody @Valid Mono<ProductDto> data, @PathVariable String id) {
+        log.info("Id=" + id + ", data=" + data);
         return productService.update(id, data);
     }
 
     @DeleteMapping("/{id}")
     public Mono<Void> delete(@PathVariable String id) {
+        log.info("id=" + id);
         return productService.deleteById(id);
     }
 }

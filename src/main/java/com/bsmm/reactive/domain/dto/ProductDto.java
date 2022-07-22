@@ -17,6 +17,7 @@ public class ProductDto {
     private String name;
     @NotNull
     private int qty;
+    @NotNull
     @PositiveOrZero
     private double price;
 }

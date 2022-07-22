@@ -1,18 +1,14 @@
 package com.bsmm.reactive.service.impl;
 
 import com.bsmm.reactive.domain.dto.ProductDto;
-import com.bsmm.reactive.domain.entity.ProductEntity;
 import com.bsmm.reactive.repository.ProductRepository;
 import com.bsmm.reactive.service.ProductService;
 import com.bsmm.reactive.utils.ProductMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.webjars.NotFoundException;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
-import static java.lang.String.format;
 
 @Service
 @RequiredArgsConstructor
@@ -22,16 +18,19 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Flux<ProductDto> getAll() {
+        log.info("---GET ALL---");
         return productRepository.findAll().map(ProductMapper::entityToDto);
     }
 
     @Override
     public Mono<ProductDto> getById(String id) {
+        log.info("id=" + id);
         return productRepository.findById(id).map(ProductMapper::entityToDto);
     }
 
     @Override
     public Flux<ProductDto> getInRange(double min, double max) {
+        log.info("min=" + min + ", max=" + max);
         return productRepository.findByPriceBetween(Mono.just(min), Mono.just(max));
     }
 
@@ -55,11 +54,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Mono<Void> deleteById(String id) {
-        getEntity(id);
+        log.info("id=" + id);
         return productRepository.deleteById(id);
-    }
-
-    private ProductEntity getEntity(String id) {
-        return productRepository.findById(id).blockOptional().orElseThrow(() -> new NotFoundException(format("Record with ID %s not found.", id)));
     }
 }
