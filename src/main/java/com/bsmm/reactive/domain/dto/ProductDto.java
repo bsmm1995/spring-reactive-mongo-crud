@@ -16,6 +16,7 @@ public class ProductDto {
     @NotEmpty
     private String name;
     @NotNull
+    @PositiveOrZero
     private int qty;
     @NotNull
     @PositiveOrZero
