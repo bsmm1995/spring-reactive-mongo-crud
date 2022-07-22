@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://test:yUq2vYTc6PkSbdUe@cluster0.mt9by.mongodb.net/Cluster0
+
+server:
+  error:
+    include-message: always
+  servlet:
+    context-path: /
